@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+ 
+    <head>
+        <meta charset="UTF-8">
+        <title>年間スケジュール</title>
+        <meta name="description" content="年間スケジュール">
+        <link rel="icon" type="png" href="logo.png">
+        <link rel="stylesheet" href="schedule.css">
+    </head>
+
+    <body>
+        <header>
+            <!--▽▽ヘッダーロゴ▽▽-->
+                  <div class="logo1">
+                      <a href=" #" id="headerlogo"><img src="headericon.png" class="hedlogo">
+                      </a>
+                  </div>
+            <!--△△ヘッダーロゴ△△-->
+            
+            
+            <!--▽▽ハンバーガーメニュー▽▽-->
+                  <div id="hamburger">
+                      <div class="icon">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </div>
+            <!--△△ハンバーガーメニュー△△-->
+            
+             
+            <!--▽▽ハンバーガーメニューのリスト▽▽-->
+                  <nav class="sm navi">
+                    <ul class="lists">
+                      <li class="lili"><a  class="listwords" href="#">代表挨拶</a></li>
+                      <li class="lili"><a  class="listwords" href="#">早稲田祭について</a></li>
+                      <li class="lili"><a  class="listwords" href="#">新歓イベント</a></li>
+                      <li class="lili"><a  class="listwords" href="#">活動について</a></li>
+                      <li class="lili"><a  class="listwords" href="#">連載記事</a></li>
+                      <li class="lili"><a  class="listwords" href="#">年間スケジュール</a></li>
+                      <li class="lili"><a  class="listwords" href="#">フォトギャラリー</a></li>
+                      <li class="lili"><a  class="listwords" href="#">入会方法</a></li>
+                      <li class="lili"><a  class="listwords" href="#">お問い合わせ</a></li>
+                   </ul>
+                 </nav>
+            <!--△△ハンバーガーメニューのリスト△△-->
+            
+        
+            <!--▽▽ヘッダーリスト▽▽-->
+                  <nav class="pc navi">  <!--pcクラスを追記-->
+                    <ul class="lists">
+                      <li class="lili"><a  class="listwords" href="#">代表挨拶</a></li>
+                      <li class="lili"><a  class="listwords" href="#">新歓イベント</a></li>
+                      <li class="lili"><a  class="listwords" href="#">連載記事</a></li>
+                      <li class="lili"><a  class="listwords" href="#">入会方法</a></li>
+                      <li class="lili"><a  class="listwords" href="#">お問い合わせ</a></li>
+                    </ul>
+                  </nav>
+            <!--△△ヘッダーリスト△△-->
+            
+                </header>
+            
+            
+            <!--▽▽jQuery▽▽-->
+                <script src="jquery-3.6.0.min.js"></script>
+                  <script>
+                    $('#hamburger').on('click', function(){
+                    $('.icon').toggleClass('close');
+                    $('.sm').slideToggle();
+                    });
+              
+                  </script>
+            <!--△△jQuery△△-->
+ 
+
+
+        <style>
+            header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 0px;
+    background-color:#78c1cd;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  }
+  
+  
+  .lili:hover{
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    opacity: 0.85;
+  
+  }
+  
+  .logo1 {
+    font-size: 25px;}
+    
+    .hedlogo{
+  height:55px;
+  width:55px;
+  margin-left:6px;
+    }
+    
+  
+  .hedlogo:hover  {
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    opacity: 0.85;
+   
+  }
+   .navi{
+    margin: 0 0 0 auto;
+  }
+  
+  .lists {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .listwords {
+    color: #eaf4fc;
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    padding: 0 20px;
+  }
+  
+  .sm {
+    display: none;
+  }
+  .toppagelogo{
+    height:500px;
+    width:500px;
+    padding:400px;
+  margin:0 auto;
+  }
+  /*---------------------------------------------------------------*/
+  @media (max-width: 900px) {
+  
+    .pc {
+      display: none;
+    }
+  
+    #hamburger {
+      background-color: transparent;
+      position:relative;
+      float:right
+      cursor:pointer;
+      margin: 0 0 0 auto;
+      height: 60px;
+      width: 60px;
+    }
+  
+    .icon span {
+      position: absolute;
+      left: 15px;
+      width: 30px;
+      height: 4px;
+      background-color:#eaf4fc;
+      border-radius: 8px;
+      transition: ease 0.75s;
+    }
+  
+    .icon span:nth-of-type(1) {
+      top: 16px;
+    }
+    .icon span:nth-of-type(2) {
+      top: 28px;
+    }
+    .icon span:nth-of-type(3) {
+      bottom: 16px;
+    }
+  
+    .close span:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 28px;
+    }
+  
+    .close span:nth-of-type(2) {
+      opacity: 0;
+    }
+  
+    .close span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+    }
+  
+    .sm {
+        top: 60px;
+        left: 0px;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        background-color: #78c1cd;
+        
+    
+    }
+  
+   .lists {
+      flex-direction: column;
+    }
+  
+    .listwords {
+      text-align: center; 
+      border-top: solid 0.5px #eaf4fc;
+    }
+  
+  
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+        </style>
+<div class="schedule">
+   <img src="schedule.png"  width="100%" height="100%"　> 
+        </div>
+      
+      <style>
+        .schedule{
+        margin-top: 60px;
+        background-color:#eaf4fc;
+        }
+        </style>
+      
+
+
+<div class="wrapper">
+  <table>
+    <tbody>
+    <tr>
+      <th rowspan="2" bgcolor="#78C1CD" class="ex_border_f">４月</th>
+						<td bgcolor="#78C1CD"><b>新歓</b></br>
+							<p>これから共に祭を創りあげる新規スタッフが入ってきてくれるよう、新歓活動をします。</br>詳細は新歓イベントページで紹介されているので要チェック！</p>
+      </td>
+    </tr>
+    <tr　bgcolor="#78C1CD">
+      <td bgcolor="#78C1CD"><b>新規入会</b></br>
+<p>いよいよ新規スタッフが入会。
+既存スタッフ一同、みなさんと会える日を楽しみにしています！</p>
+      </td>
+    </tr>
+    <tr>
+      <th bgcolor="#17183B" class="ex_border_f">５月</th>
+      <td bgcolor="#17183B"><b>局配属</b></br>
+<p>どきどきの局配属！
+どの局に入っても最高の運営スタッフ生活が待ってます！</p>
+　　　</td>
+    </tr>
+    <tr>
+      <th rowspan="2" bgcolor="#78C1CD" class="ex_border_f">６月</th>
+      <td bgcolor="#78C1CD"><b>チーム配属</b></br>
+<p>これから最も長く時間を共にする仲間との出会い！ </br>お互いのことをたくさん知って良いチームになろう！</p>
+　　　</td>
+    </tr>
+    <tr>
+      <td bgcolor="#78C1CD"><b>新歓合宿</b></br>
+<p>新規スタッフが入会して初めての宿泊行事。
+たくさんの新たな仲間と仲良くなること間違いなし！</br>
+※2020年度は新型コロナウイルスの影響により中止</p>
+      </td>
+    </tr>
+    <tr>
+      <th bgcolor="#17183B" class="ex_border_f">８月</th>
+      <td bgcolor="#17183B"><b>運スタ夏休み（約2週間）</b></br>
+<p>運営スタッフの活動は一旦お休み。
+活動のない期間はそれぞれが夏休みを満喫します！</br>運スタで仲良くなれた友だちと遊びに行くのもきっと楽しい！！</p>
+　　　</td>
+    </tr>
+    <tr>
+      <th bgcolor="#78C1CD" class="ex_border_f">10月</th>
+      <td bgcolor="#78C1CD"><b>運スタ夏休み（約2週間）</b></br>
+<p>運営スタッフの活動は一旦お休み。
+活動のない期間はそれぞれが夏休みを満喫します！ 運スタで仲良くなれた友だちと遊びに行くのもきっと楽しい！！</p>
+　　　　</td>
+    </tr>
+    <tr>
+      <th bgcolor="#17183B" class="ex_border_f">11月上旬</th>
+      <td bgcolor="#17183B"><b>早稲田祭</b></br>
+<p>待ちに待った早稲田祭当日！ 今までの努力が実を結ぶ、運営スタッフの集大成です。</br>早大生一人ひとりの個性が輝く当日の景色は忘れられない思い出になるはず！</p>
+　　　</td>
+    </tr>
+    <tr>
+		<th bgcolor="#78C1CD" class="ex_border_f">11月中旬</br>から３月</th>
+      <td bgcolor="#78C1CD"><b>次年度に向けた準備</b></br>
+<p>早稲田祭が終わると、すぐに次年度の準備に！ </br>新たな代表や各局の局長を決め、新体制で次の早稲田祭へ向けて動き出します。</br>3月には新歓に向けての準備もスタート！</p>
+　　　</td>
+    </tr>
+  </tbody>
+  </table>
+  </div>
+      
+      
+  <style>
+          
+    .wrapper{
+       background-color:#eaf4fc;   
+      font-family: serif;
+       width: 100%;
+    height: auto;
+          }
+          
+  table{
+      margin-top:150px;
+      margin-bottom:150px;
+          }        
+          
+		
+	
+table, td, th {
+border: 3px #eaf4fc solid;
+}
+	th{
+	font-size:27px;
+				}
+	td{
+	font-size:22px;
+				}
+	p{
+	margin-top:15px;
+	margin-bottom:15px;
+	font-size:20px;
+				}
+  </style>
+
+        
+  <footer>
+
+<div class="wrapper2">
+    <p class="title">WASEDASAI OPERATION STAFF</br>SHINKAN 2021</p>
+    <div class="innerbox">
+          
+        <a href="https://twitter.com/wasedasai_new?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" > 
+            <img src="twitter.png" alt="twitter" width="80" height="80"　border="0"> 
+        </a>
+
+        <a href="https://www.instagram.com/wasedasai_new/" target="_blank" > 
+            <img src="instagram.png" alt="instagram" width="80" height="80"　border="0"> 
+        </a>
+
+        <a href="https://qr-official.line.me/sid/M/011uqnra.png" target="_blank" > 
+            <img src="line.png" alt="line" width="80" height="80"　border="0"> 
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCFh9blapIkxPf4Al3L87QHQ" target="_blank" > 
+            <img src="youtube.png" alt="youtube" width="80" height="80"　border="0"> 
+        </a>
+    </div>
+</div>
+    <div class="footerlogo">
+        <a href="toppage.html" target="_blank" > 
+            <img src="footerlogo.png" alt="footerlogo" width="40%" height="40%"　border="0"> 
+        </a>
+    </div>
+
+
+    </div>
+    <p><small>Copyright @ WASEDASAI2021 Staff All Rights Reserved. </small></p>
+</div>
+</footer>
+
+<style>
+   footer {
+    background-color: #78c1cd;
+    text-align: center;
+    padding: 26px 0;
+    text-decoration: none;
+}
+
+footer p {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: serif;
+}
+.wrapper2 {
+    background-color: #78c1cd;
+}
+
+
+.innerbox {
+    margin-top: 5px;
+    background-color: #78c1cd;
+    text-align: center;
+    width: 450px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;/*水平方向に均等に分布(端は詰める)*/
+}
+
+.footerlogo{
+    margin-top: 5px;
+}
+  </style>
+</body>
+<style>
+  body {
+	background-color:#eaf4fc;
+}
+  </style>
+</html>
+
+  
