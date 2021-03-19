@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th{
+  padding : 20px 10px;
+}
+
+table td{
+  padding : 20px 10px;
+}
+
+table{
+  width: 80%;
+}
+
+th{
+  width: 20%;
+}
+
+td{
+  width: 100%;
+}
+
+th,td{
+  border:solid 50px #17183B;
+}
+
+th,td{
+  color:white; /*文字色*/
+}
+
+table {
+  border-collapse: collapse;
+}
+table th, table td {
+  border: solid 1px black;
+  /*実線 1px 黒*/
+}
+/*余白と文字装飾は省略*/
+
+
+
+table.ex_table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+table.ex_table th {
+  border: 1px solid #222;
+  padding: 3px;
+}
+
+table.ex_table th.ex_border_f {
+  border-right: 15px solid #222;
+}
